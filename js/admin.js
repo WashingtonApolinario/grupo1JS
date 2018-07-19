@@ -415,9 +415,9 @@ $("#guardar-pregunta").click(function(){
         let tmp_opcion3= new Opcion(pregunta.opciones[2].descripcion, opcion3)
         let tmp_opcion4= new Opcion(pregunta.opciones[3].descripcion, opcion4)
 
-
-
-        let tmp_pregunta = new Pregunta(descripcion, pregunta.audio, [tmp_opcion1, tmp_opcion2, tmp_opcion3, tmp_opcion4], pregunta.respuesta)
+        let opcSelect = $("#select-respuesta-editar").change().val();
+        
+        let tmp_pregunta = new Pregunta(descripcion, [tmp_opcion1, tmp_opcion2, tmp_opcion3, tmp_opcion4], opcSelect)
 
         arregloUsuarios[index_user].excursiones[index_excursion].pregunta = tmp_pregunta;
 
@@ -466,11 +466,15 @@ $("#guardar-nueva-pregunta").click(function(){
         arregloOpc.push(op4);
    
    
-        
+        let opcSelect = $("#select-respuesta-nuevo").change().val();
+     
     
-               var nuevaPregunta = new Pregunta(descripcion, arregloOpc, 1 );
-        console.log(nuevaPregunta);
+    
+    
+               var nuevaPregunta = new Pregunta(descripcion, arregloOpc, opcSelect );
+       // console.log(nuevaPregunta);
                
+    console.log(opcSelect);
            
         
         
