@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Excursion</title>
+
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/excursion.css">
+
+    <!--<script src="js/bootstrap_js/bootstrap.js"></script>-->
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div id="login-form" class="oculto">
+        <div class="card text-white bg-dark mb-2 centrado-porcentual" >
+            <h3 class="card-header">Bienvenido! Ingresa tus datos</h3>
+            <div class="card-body">
+                <div class="col-12">
+                    <img src="images/cuenta.png" width="150px" style="display: block;margin: 0px auto"><br>
+                  <input class="form-control" type="text" id="user" placeholder="Usuario..."><br>
+                   <input class="form-control" type="password" id="clave" placeholder="Contraseña..."><br>
+                    <button class="btn btn-primary col-12" id="login">Iniciar Sesión</button><br><br>
+                    <a class="col-12 linkRegresar" href="index.html">Regresar a inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-between oculto bg-light modal-body" id="menu">
+
+        <div><img src="images/Logo.png" width="250px"></div>
+        <div class="text-left rem">
+
+            <h1 class="title">Mis excursiones</h1>
+        </div>
+
+        <div class=" text-right rem">
+            <a href="excursion.html" class="btn btn-success"><span class="fa fa-home"></span>Home</a>
+
+            <a href="#" id="salir" class="btn btn-danger"><span class="fa fa-sign-out"></span>Salir</a>
+        </div>
+    </div>
+
+    <div class="row oculto" id="excursiones">
+         <div class="col-12">
+         </div>
+    </div>
+
+    <div class="row oculto p-3" id="excursion">
+        <div class="mx-auto">
+            <h1 class="title text-white" >Bienvenido a: <span id="titulo"></span></h1>
+        </div>
+
+        <div class="col-12 col-8" id="vid">
+            <div class="embed-responsive embed-responsive-21by9  ">
+                <iframe id="main-video" width="200px" height="300px"> </iframe>
+                <!-- <iframe id="main-video" controls="0"allowfullscreen> </iframe> -->
+            </div>
+        </div>
+
+        <div class="mx-auto p-3">
+            <button type="button" id="continuar" class="btnpl-preg btn-success oculto"><span class="fa fa-question"></span>Pregunta</button>
+        </div>
+
+        <div class="col-12 col-8 p-3" >
+          <table class="table table-bordered table-light">
+            <thead>
+              <tr>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Creditos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="descripcion"></td>
+                <td id="credito"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+    <div class="row oculto p-3" id="contenedor-pregunta">
+        <div class="col-12">
+            <h1 id="pregunta-descripcion" class="bg-light">Pregunta</h1>
+            <audio id="audio-pregunta">
+                <source type="audio/mp3">
+            </audio>
+            <form id="pregunta"></form>
+        </div>
+
+        <div class="col-12 text-right rem">
+            <button type="button" id="verificar-respuesta" role="alert" class="btn btn-success"><span class="fa fa-check"></span>Verificar Respuesta</button>
+        </div>
+    </div>
+
+</div>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap_js/bootstrap.js"></script>
+    <script src="js/objetos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

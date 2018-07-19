@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="menu">
+        <img src="images/Logo.png" width="20%">
+    <a href="index.html" class="btn btn-primary">Inicio </a>
+    </div>
+
+
+    <div id="divUsuarios">
+    <h1>Lista de usuarios</h1>
+        <table id="usuarios" class="table table-bordered table-dark">
+        </table><!--Tabla para listar los usuarios-->
+
+        <button id="btn-nuevo" class="btn btn-primary">Nuevo usuario</button>
+    </div>
+<!--login  -->
+    <div id="fondoDivOculto" class="oculto agregar-usuario">
+            <div id="agregar-usuario" class="oculto ventPop">
+                <label for="usuario">
+                    Usuario:
+                    <input type="text" id="usuario-a">
+                </label><br>
+                <label for="usuario">
+                    Clave:
+                        <input type="text" id="clave-a">
+                </label>
+
+                    <button id="btn-agregar-usuario">Guardar</button>
+                <button id="btnCancelarNuevoUsuario">Cancelar</button>
+        </div>
+        </div>
+<!-- POPUP EDITAR USUARIO -->
+    <div id="fondoDivOculto" class="oculto editar-usuario">
+        <div id="editar-usuario" class="oculto ventPop">
+            <label for="usuario">
+                Usuario:
+                <input type="text" id="usuario-">
+            </label><br>
+            <label for="usuario">
+                Clave:
+                    <input type="text" id="clave-">
+            </label>
+
+                <button id="guardar-usuario">Guardar</button>
+                <button id="btnCancelarEditarUsuario">Cancelar</button>
+        </div>
+    </div>
+
+
+    <div id="divExcursiones">
+        <h1>Lista de Excursiones</h1>
+    <table id="excursiones" class="table table-bordered table-dark">
+    </table><!--Tabla para listar las excursiones-->
+    <button id="btn-nueva-excursion" class="btn btn-primary">Nueva excursion</button>
+    </div>
+
+<!-- POPUP agregar btn-nueva Excursion -->
+    <div id="fondoDivOculto" class="oculto agregar-excursion">
+        <div id="agregar-excursion" class="oculto ventPop">
+            <label for="excursion">
+                Usuario
+                <select name="" id="usuario-select"></select>
+            </label>
+                <label for="excursion">
+                    Titulo:
+                    <input type="text" id="excursion-titulo-a">
+                </label><br>
+                <label for="excursion">
+                    Descripcion:
+                        <input type="text" id="excursion-descripcion-a">
+                    </label>
+                    <label for="excursion">
+                            Credito:
+                                <input type="text" id="excursion-credito-a">
+                    </label>
+                    <label for="excursion">
+                            Portada URL:
+                            <input type='file' id="imgInp" />
+                            <img id="portada-excursion-agregar" src="#" alt="your image" width="100" height="100"/>
+                                <!--<input type="text" id="excursion-portada-a">-->                    </label>
+                    <label for="excursion">
+                            Video URL:
+                                <input type="text" id="excursion-video-a">
+                    </label>
+            <br>
+                    <button id="guardar-nueva-excursion">Agregar</button>
+            <button id="btnCancelarNuevaExcursion">Cancelar</button>
+            </div>
+        </div>
+
+  <!-- POPUP EDITAR excursion -->
+    <div id="fondoDivOculto" class="oculto editar-excursion">
+        <div id="editar-excursion" class="oculto ventPop">
+            <label for="excursion">
+                    Usuario
+                    <select name="" id="usuario-select-editar"></select>
+            <label for="excursion">
+                Titulo:
+                <input type="text" id="excursion-titulo">
+            </label><br>
+            <label for="excursion">
+                Descripcion:
+                    <input type="text" id="excursion-descripcion">
+                </label>
+                <label for="excursion">
+                        Credito:
+                            <input type="text" id="excursion-credito">
+                </label>
+                <label for="excursion">
+                        Portada URL:
+                        <img src="#" width="100" height="100" id="excursion-portada">
+                        <input type='file' id="editarPortadaExcursion" />
+                            <!--<input type="text" id="excursion-portada">-->
+                </label>
+                <label for="excursion">
+                        Video URL:
+                        <input type="text" id="excursion-video">
+                </label> <br>
+
+                <button id="guardar-excursion">Guardar</button>
+                <button id="btnCancelarEditarExcursion">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="divExcursiones">
+        <h1>Lista de Preguntass</h1>
+        <table id="preguntas" class="table table-bordered table-dark">
+        </table><!--Tabla para listar las preguntas-->
+        <button id="btn-nueva-pregunta" class="btn btn-primary">Nueva Pregunta</button>
+    </div>
+
+<!-- POPUP EDITAR preguntas -->
+    <div id="fondoDivOculto" class="oculto editar-pregunta">
+        <div id="editar-pregunta" class="oculto ventPop">
+           <br>
+            <label for="excursion">
+                Pregunta:
+                    <input type="text" id="pregunta-descripcion">
+                </label>
+                <label for="excursion">
+                        Opcion1:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-1">
+                        <input type='file' id="preguntaOpcion1" />
+                </label>
+                <label for="excursion">
+                        Opcion2:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-2">
+                        <input type='file' id="preguntaOpcion2" />
+                </label>
+                <label for="excursion">
+                        Opcion3:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-3">
+                        <input type='file' id="preguntaOpcion3" />
+                </label>
+                <label for="excursion">
+                        Opcion4:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-4">
+                        <input type='file' id="preguntaOpcion4" />
+                </label>
+
+<br>
+                <button id="guardar-pregunta">Guardar</button>
+                <button id="btnCancelarEditarPregunta">Cancelar</button>
+        </div>
+
+    </div>
+
+<!-- POPUP agregar nueva pregunta -->
+        <div id="fondoDivOculto" class="oculto agregar-pregunta">
+        <div id="agregar-pregunta" class="oculto ventPop">
+            <label for="excursion">
+                Usuario
+                <select name="" id="usuario-select-pregunta"></select>
+                </label>
+
+             <label for="excursion">
+                Excursion
+                <select name="" id="excursion-select-pregunta"></select>
+                </label>
+            <label for="excursion">
+                Pregunta:
+                   <input type="text" id="pregunta-descripcion-nuevo">
+                </label>
+                <label for="excursion">
+                        Opcion1:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-1-agregar">
+                        <input type='file' id="preguntaOpcion1Agregar" />
+                </label>
+                <label for="excursion">
+                        Opcion2:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-2-agregar">
+                        <input type='file' id="preguntaOpcion2Agregar" />
+                </label>
+                <label for="excursion">
+                        Opcion3:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-3-agregar">
+                        <input type='file' id="preguntaOpcion3Agregar" />
+                </label>
+                <label for="excursion">
+                        Opcion4:
+                        <img src="#" width="100" height="100" id="pregunta-opcion-4-agregar">
+                        <input type='file' id="preguntaOpcion4Agregar" />
+                </label>
+            <br>
+                    <button id="guardar-nueva-pregunta">AgregarP</button>
+                    <button id="btnCancelarNuevaPregunta">Cancelar</button>
+            </div>
+        </div>
+
+            <a id="downloadAnchorElem" class="oculto"></a>
+
+            <button id="btn-descargar-json" class="btn btn-primary">Descargar JSON</button>
+
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/objetos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+
+
+</body>
+</html>
